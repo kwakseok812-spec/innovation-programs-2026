@@ -1,158 +1,216 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>혁신사업 프로그램 (공유용)</title>
+<title>혁신사업 프로그램</title>
+<meta name="description" content="동양미래대 혁신지원사업 3주기 2차년도 – 분야별 전체 프로그램(예산 편성·미편성·재원) 정리 대시보드">
 <style>
 :root{
-  --ground:#F4F6F8; --surface:#FFFFFF; --surface-2:#FAFBFC; --line:#E3E7EC; --line-strong:#CDD4DC;
-  --ink:#1B2430; --ink-2:#4A5566; --ink-3:#7E8899;
-  --accent:#2E3A73; --accent-2:#3D5AC9; --accent-soft:#EEF1FB;
-  --good:#2E7D5B; --good-soft:#E6F2EC;
-  --warn:#B85E12; --warn-soft:#FBEEDD; --warn-line:#EBC79A;
+  --ground:#F3F5F8; --surface:#FFFFFF; --surface-2:#F7F9FB; --line:#E4E8ED; --line-2:#D3DAE2;
+  --ink:#182231; --ink-2:#4E5A6B; --ink-3:#8A94A3;
+  --accent:#2E3A73; --accent-2:#3D5AC9; --accent-soft:#EBEFFB;
+  --good:#2C7A57; --good-soft:#E4F1EA;
+  --warn:#B15A12; --warn-soft:#FBEDDC; --warn-line:#E8C295;
   --f-edu:#4B57C4; --f-edu-soft:#ECEEFA;
-  --f-ind:#0E7C86; --f-ind-soft:#E3F2F3;
-  --f-aut:#7A51B0; --f-aut-soft:#F1EAF8;
-  --f-ops:#5A6473; --f-ops-soft:#EDEFF2;
-  --shadow:0 1px 2px rgba(20,30,48,.05),0 4px 16px rgba(20,30,48,.05);
-  --shadow-lg:0 8px 40px rgba(20,30,48,.18);
+  --f-ind:#0E7C86; --f-ind-soft:#E1F1F2;
+  --f-aut:#7A51B0; --f-aut-soft:#F0E8F8;
+  --f-ops:#5A6473; --f-ops-soft:#ECEFF2;
+  --shadow:0 1px 2px rgba(18,28,45,.04),0 6px 20px rgba(18,28,45,.05);
+  --shadow-lg:0 12px 48px rgba(18,28,45,.20);
+  --zebra:#F8FAFC;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ground:#0E1319; --surface:#161C24; --surface-2:#1B222C; --line:#28313D; --line-strong:#3A4552;
-  --ink:#EAEEF3; --ink-2:#AEB8C6; --ink-3:#7C8798;
-  --accent:#8FA0EE; --accent-2:#7E92E8; --accent-soft:#1E2740;
-  --good:#5FBE8E; --good-soft:#16281F;
-  --warn:#E0994A; --warn-soft:#2E2114; --warn-line:#5C4426;
-  --f-edu:#8C97EC; --f-edu-soft:#1F2440;
-  --f-ind:#4FBFC8; --f-ind-soft:#12292B;
-  --f-aut:#B48FDC; --f-aut-soft:#241a33;
-  --f-ops:#95A0B0; --f-ops-soft:#20262E;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.3);
-  --shadow-lg:0 8px 40px rgba(0,0,0,.6);
+  --ground:#0D1218; --surface:#151B23; --surface-2:#1A212B; --line:#28313D; --line-2:#3A4552;
+  --ink:#EBEFF4; --ink-2:#AEB9C7; --ink-3:#7A8595;
+  --accent:#93A2EE; --accent-2:#8095EA; --accent-soft:#1D2740;
+  --good:#5CC08D; --good-soft:#14271E;
+  --warn:#E19A4E; --warn-soft:#2C2013; --warn-line:#5A4425;
+  --f-edu:#8F9AED; --f-edu-soft:#1E2440;
+  --f-ind:#4FBFC8; --f-ind-soft:#11282A;
+  --f-aut:#B693DD; --f-aut-soft:#231933;
+  --f-ops:#96A1B1; --f-ops-soft:#1F252E;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.35);
+  --shadow-lg:0 12px 48px rgba(0,0,0,.6);
+  --zebra:#191F28;
 }}
 :root[data-theme="dark"]{
-  --ground:#0E1319; --surface:#161C24; --surface-2:#1B222C; --line:#28313D; --line-strong:#3A4552;
-  --ink:#EAEEF3; --ink-2:#AEB8C6; --ink-3:#7C8798;
-  --accent:#8FA0EE; --accent-2:#7E92E8; --accent-soft:#1E2740;
-  --good:#5FBE8E; --good-soft:#16281F;
-  --warn:#E0994A; --warn-soft:#2E2114; --warn-line:#5C4426;
-  --f-edu:#8C97EC; --f-edu-soft:#1F2440;
-  --f-ind:#4FBFC8; --f-ind-soft:#12292B;
-  --f-aut:#B48FDC; --f-aut-soft:#241a33;
-  --f-ops:#95A0B0; --f-ops-soft:#20262E;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.3);
-  --shadow-lg:0 8px 40px rgba(0,0,0,.6);
+  --ground:#0D1218; --surface:#151B23; --surface-2:#1A212B; --line:#28313D; --line-2:#3A4552;
+  --ink:#EBEFF4; --ink-2:#AEB9C7; --ink-3:#7A8595;
+  --accent:#93A2EE; --accent-2:#8095EA; --accent-soft:#1D2740;
+  --good:#5CC08D; --good-soft:#14271E;
+  --warn:#E19A4E; --warn-soft:#2C2013; --warn-line:#5A4425;
+  --f-edu:#8F9AED; --f-edu-soft:#1E2440;
+  --f-ind:#4FBFC8; --f-ind-soft:#11282A;
+  --f-aut:#B693DD; --f-aut-soft:#231933;
+  --f-ops:#96A1B1; --f-ops-soft:#1F252E;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.35);
+  --shadow-lg:0 12px 48px rgba(0,0,0,.6);
+  --zebra:#191F28;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--ground);color:var(--ink);
   font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;
-  font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding:22px 20px 80px}
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:28px 24px 96px}
 h1,h2,h3{margin:0;text-wrap:balance}
 .tnum{font-variant-numeric:tabular-nums}
 button{font-family:inherit;cursor:pointer}
-.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
-.head{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin-bottom:6px}
-.head h1{font-size:25px;font-weight:700;letter-spacing:-.01em}
-.head .sub{color:var(--ink-2);font-size:13px;margin-top:5px;max-width:62ch}
-.head .meta{font-size:11.5px;color:var(--ink-3);margin-top:7px}
-.head .right-top{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
-.theme-btn{background:var(--surface);border:1px solid var(--line);color:var(--ink-2);border-radius:8px;
-  padding:7px 11px;font-size:12px;display:inline-flex;gap:6px;align-items:center}
-.theme-btn:hover{border-color:var(--line-strong)}
-.viewbadge{font-size:11px;padding:5px 11px;border-radius:16px;font-weight:600;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0 14px}
-.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 15px 13px;box-shadow:var(--shadow);position:relative;overflow:hidden;cursor:pointer}
-.tile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--fc,var(--accent))}
-.tile .fname{font-size:13px;font-weight:600;color:var(--ink);padding-left:6px;display:flex;align-items:center;gap:7px}
-.tile .dot{width:9px;height:9px;border-radius:3px;background:var(--fc,var(--accent))}
-.tile .big{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:10px 0 2px;padding-left:6px}
-.tile .big small{font-size:13px;font-weight:500;color:var(--ink-3);letter-spacing:0}
-.tile .split{display:flex;gap:14px;padding-left:6px;margin-top:8px;font-size:12px}
-.tile .split b{font-weight:600}
-.sg{color:var(--good)} .sw{color:var(--warn)}
-.tile .bar{height:6px;border-radius:4px;background:var(--warn-soft);margin:10px 6px 6px;overflow:hidden;display:flex}
-.tile .bar i{display:block;height:100%;background:var(--good)}
-.tile .money{padding-left:6px;font-size:11.5px;color:var(--ink-3);margin-top:4px}
-.alert{background:var(--warn-soft);border:1px solid var(--warn-line);border-radius:12px;padding:14px 16px;margin:14px 0 8px;display:flex;gap:14px;align-items:flex-start}
-.alert .ic{flex:none;width:26px;height:26px;border-radius:7px;background:var(--warn);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px}
-.alert .t{font-weight:600;color:var(--warn);font-size:13.5px}
-.alert .d{color:var(--ink-2);font-size:12.5px;margin-top:2px}
-.alert .d b{color:var(--ink)}
-.toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:18px 0 4px;position:sticky;top:0;z-index:5;
-  background:var(--ground);padding:8px 0;border-bottom:1px solid var(--line)}
-.search{flex:1;min-width:180px;position:relative}
-.search input{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:9px;
-  padding:9px 12px 9px 32px;color:var(--ink);font-size:13px;font-family:inherit}
-.search input:focus{outline:2px solid var(--accent-2);outline-offset:0;border-color:transparent}
-.search .mag{position:absolute;left:10px;top:9px;color:var(--ink-3)}
-select,.btn{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:8px 11px;color:var(--ink);font-size:12.5px;font-family:inherit}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+
+/* Header */
+.head{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
+.head h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin-top:6px}
+.head .sub{color:var(--ink-2);font-size:15px;margin-top:8px;max-width:66ch}
+.head .right-top{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.theme-btn{background:var(--surface);border:1px solid var(--line);color:var(--ink-2);border-radius:10px;
+  padding:9px 14px;font-size:13px;display:inline-flex;gap:7px;align-items:center}
+.theme-btn:hover{border-color:var(--line-2)}
+.viewbadge{font-size:12px;padding:7px 13px;border-radius:20px;font-weight:700;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+
+/* Hero big stats */
+.hero{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 18px}
+.hstat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow)}
+.hstat .k{font-size:13px;color:var(--ink-3);font-weight:600;letter-spacing:.02em}
+.hstat .v{font-size:42px;font-weight:800;letter-spacing:-.03em;margin-top:6px;line-height:1.05}
+.hstat .v small{font-size:18px;font-weight:600;color:var(--ink-3);letter-spacing:0}
+.hstat.warn{background:var(--warn-soft);border-color:var(--warn-line)}
+.hstat.warn .v{color:var(--warn)}
+.hstat .sub2{font-size:12.5px;color:var(--ink-3);margin-top:4px}
+
+/* Section titles */
+.blocktitle{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:24px 2px 12px}
+
+/* 분야별 4 cards */
+.fields{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:var(--shadow);position:relative;overflow:hidden;cursor:pointer}
+.fcard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--fc)}
+.fcard .fn{font-size:15px;font-weight:700;display:flex;align-items:center;gap:9px;padding-left:6px}
+.fcard .fn .dot{width:11px;height:11px;border-radius:4px;background:var(--fc)}
+.fcard .n{font-size:34px;font-weight:800;letter-spacing:-.02em;padding-left:6px;margin:12px 0 2px}
+.fcard .n small{font-size:14px;font-weight:600;color:var(--ink-3);letter-spacing:0}
+.fcard .stack{height:12px;border-radius:6px;overflow:hidden;display:flex;margin:12px 6px 8px;background:var(--warn-soft)}
+.fcard .stack .ok{background:var(--good)}
+.fcard .legend{display:flex;justify-content:space-between;padding:0 6px;font-size:12.5px}
+.fcard .legend .g{color:var(--good);font-weight:700}
+.fcard .legend .w{color:var(--warn);font-weight:700}
+.fcard .money{padding-left:6px;font-size:12.5px;color:var(--ink-3);margin-top:8px}
+
+/* 재원별 bar chart */
+.fundchart{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow)}
+.fbar{display:grid;grid-template-columns:110px 1fr auto;gap:14px;align-items:center;padding:7px 0}
+.fbar .lb{font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:8px}
+.fbar .lb .d{width:11px;height:11px;border-radius:4px}
+.fbar .track{height:22px;background:var(--surface-2);border-radius:7px;overflow:hidden}
+.fbar .fill{height:100%;border-radius:7px;min-width:3px}
+.fbar .val{font-size:13.5px;font-weight:700;min-width:118px;text-align:right;color:var(--ink-2)}
+.fbar .val small{font-weight:500;color:var(--ink-3)}
+
+/* Toolbar */
+.toolbar{display:flex;flex-wrap:wrap;gap:11px;align-items:center;margin:22px 0 6px;position:sticky;top:0;z-index:20;
+  background:var(--ground);padding:12px 0;border-bottom:1px solid var(--line)}
+.search{flex:1;min-width:200px;position:relative}
+.search input{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:11px;
+  padding:12px 14px 12px 40px;color:var(--ink);font-size:14.5px;font-family:inherit}
+.search input:focus{outline:2px solid var(--accent-2);border-color:transparent}
+.search .mag{position:absolute;left:13px;top:12px;color:var(--ink-3);font-size:16px}
+select,.btn{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:11px 13px;color:var(--ink);font-size:14px;font-family:inherit}
 select:focus{outline:2px solid var(--accent-2)}
-.btn{display:inline-flex;gap:6px;align-items:center;font-weight:500}
-.btn:hover{border-color:var(--line-strong)}
-.chipset{display:flex;gap:6px;flex-wrap:wrap}
-.fchip{border:1px solid var(--line);background:var(--surface);border-radius:20px;padding:6px 12px;font-size:12px;color:var(--ink-2);font-weight:500}
-.count-line{font-size:12px;color:var(--ink-3);margin:12px 2px 4px}
-.fundsum{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 2px;align-items:center}
-.fundsum .hd{font-size:11px;font-weight:700;color:var(--ink-2);letter-spacing:.08em;text-transform:uppercase;margin-right:2px}
-.fundsum .fs{display:flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:7px 11px;font-size:12px;box-shadow:var(--shadow)}
-.fundsum .fs .d{width:9px;height:9px;border-radius:3px}
-.fundsum .fs b{font-weight:600;font-variant-numeric:tabular-nums}
-.fundsum .fs small{color:var(--ink-3)}
-.badge.fund{display:inline-flex;align-items:center;gap:4px}
-.field-sec{margin-top:22px}
-.field-h{display:flex;align-items:center;gap:10px;padding:8px 2px;border-bottom:2px solid var(--fc,var(--accent));margin-bottom:2px}
-.field-h .fdot{width:12px;height:12px;border-radius:4px;background:var(--fc)}
-.field-h h2{font-size:16px;font-weight:700;letter-spacing:-.01em}
-.field-h .fc{font-size:12px;color:var(--ink-3);font-weight:500;margin-left:auto}
-.strat{margin-top:14px}
-.strat-h{font-size:12.5px;font-weight:600;color:var(--ink-2);letter-spacing:.02em;margin:8px 0 2px;padding-left:2px;
-  display:flex;align-items:center;gap:8px}
-.strat-h::before{content:"";width:16px;height:2px;background:var(--fc);border-radius:2px}
-.task-grp{margin:6px 0 2px}
-.task-h{font-size:11.5px;color:var(--ink-3);font-weight:600;margin:9px 0 5px;padding-left:20px;position:relative}
-.task-h::before{content:"›";position:absolute;left:8px;color:var(--fc)}
-.task-h .lk{color:var(--f-ind);font-weight:500;margin-left:6px}
-.rows{display:flex;flex-direction:column;gap:7px}
-.row{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 13px;
-  display:grid;grid-template-columns:1fr auto;gap:8px 14px;box-shadow:var(--shadow);align-items:center}
-.row.unbudg{border-left:3px solid var(--warn);background:linear-gradient(90deg,var(--warn-soft) 0%,var(--surface) 46%)}
-.row .main{min-width:0}
-.row .nm{font-weight:600;font-size:13.5px;color:var(--ink);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.row .nm .code{font-size:11px;color:var(--ink-3);font-weight:500}
-.row.task-only .nm{color:var(--warn);font-style:italic;font-weight:500}
-.row .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
-.badge{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:20px;letter-spacing:.01em;white-space:nowrap}
-.b-orig{background:var(--accent-soft);color:var(--accent)}
+.btn{display:inline-flex;gap:7px;align-items:center;font-weight:600}
+.btn:hover{border-color:var(--line-2)}
+.countbar{font-size:13.5px;color:var(--ink-3);margin:14px 2px 2px}
+.clearbtn{background:none;border:none;color:var(--accent-2);font-size:13px;font-weight:600;margin-left:8px;text-decoration:underline;padding:0}
+
+/* Field table section */
+.tsec{margin-top:26px}
+.tsec-h{display:flex;align-items:center;gap:12px;padding:11px 4px;border-bottom:2.5px solid var(--fc);margin-bottom:0}
+.tsec-h .dot{width:14px;height:14px;border-radius:5px;background:var(--fc)}
+.tsec-h h2{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.tsec-h .meta{margin-left:auto;font-size:13px;color:var(--ink-3);font-weight:600}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-top:none;border-radius:0 0 14px 14px;background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:720px}
+thead th{text-align:left;font-size:12.5px;font-weight:700;color:var(--ink-2);background:var(--surface-2);
+  padding:13px 16px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none;position:relative}
+thead th:hover{color:var(--accent-2)}
+thead th .ar{opacity:.4;font-size:11px;margin-left:3px}
+thead th.on .ar{opacity:1;color:var(--accent-2)}
+th.num,td.num{text-align:right}
+th.ctr,td.ctr{text-align:center}
+tbody td{padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr.prow{cursor:pointer}
+tbody tr.prow:nth-child(4n+1){background:var(--zebra)}
+tbody tr.prow:hover{background:var(--accent-soft)}
+tbody tr.prow.open{background:var(--accent-soft)}
+.pname{font-weight:700;color:var(--ink);display:flex;align-items:center;gap:9px}
+.pname .caret{color:var(--ink-3);font-size:12px;transition:transform .15s;flex:none}
+tr.prow.open .pname .caret{transform:rotate(90deg);color:var(--accent-2)}
+.pcode{font-size:11.5px;color:var(--ink-3);font-weight:500}
+.ptask{color:var(--ink-2);font-size:13.5px}
+.ptask .st{color:var(--ink-3);font-size:12px}
+.amt{font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.amt.zero{color:var(--warn)}
+.subamt{font-size:12px;color:var(--ink-3);white-space:nowrap}
+.badge{font-size:12px;font-weight:700;padding:4px 11px;border-radius:20px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+.badge .d{width:7px;height:7px;border-radius:2px}
 .b-good{background:var(--good-soft);color:var(--good)}
 .b-warn{background:var(--warn-soft);color:var(--warn);border:1px solid var(--warn-line)}
-.b-link{background:var(--f-ind-soft);color:var(--f-ind)}
-.b-dept{background:var(--surface-2);color:var(--ink-3);border:1px solid var(--line)}
-.row .note{font-size:11.5px;color:var(--ink-3);margin-top:5px}
-.row .right{display:flex;align-items:center;gap:12px;justify-self:end}
-.row .fig{text-align:right;min-width:96px}
-.row .fig .amt{font-size:14px;font-weight:600;letter-spacing:-.01em}
-.row .fig .amt.zero{color:var(--warn)}
-.row .fig .lbl{font-size:10px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
-.row .fig .sp{font-size:11px;color:var(--ink-3);margin-top:2px}
-.empty{text-align:center;color:var(--ink-3);padding:40px;font-size:13px}
-.overlay{position:fixed;inset:0;background:rgba(15,20,30,.5);display:grid;place-items:center;padding:18px;z-index:50}
-.modal{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-lg);width:min(560px,100%);max-height:90vh;overflow:auto}
-.modal h3{font-size:15px;font-weight:700;padding:16px 18px;border-bottom:1px solid var(--line)}
-.modal .body{padding:14px 18px}
-.modal .foot{display:flex;justify-content:space-between;gap:10px;padding:14px 18px;border-top:1px solid var(--line);position:sticky;bottom:0;background:var(--surface)}
-.modal .foot .r{display:flex;gap:8px}
+.fundcell{display:flex;flex-wrap:wrap;gap:5px}
+
+/* detail row */
+tr.detail>td{padding:0;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.detail-inner{padding:18px 22px 20px;display:grid;gap:14px}
+.detail-inner .desc{font-size:14px;line-height:1.75;color:var(--ink-2);max-width:90ch}
+.detail-meta{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13px}
+.detail-meta .m{display:flex;flex-direction:column;gap:2px}
+.detail-meta .m .lbl{font-size:11px;color:var(--ink-3);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.detail-meta .m .val{font-weight:600;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+
+.empty{text-align:center;color:var(--ink-3);padding:48px;font-size:14px}
+
+/* modal (export) */
+.overlay{position:fixed;inset:0;background:rgba(15,20,30,.55);display:grid;place-items:center;padding:20px;z-index:60}
+.modal{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);width:min(620px,100%);max-height:90vh;overflow:auto}
+.modal h3{font-size:17px;font-weight:800;padding:18px 20px;border-bottom:1px solid var(--line)}
+.modal .body{padding:16px 20px}
+.modal .foot{display:flex;justify-content:space-between;gap:12px;padding:16px 20px;border-top:1px solid var(--line);position:sticky;bottom:0;background:var(--surface)}
+.modal .foot .r{display:flex;gap:9px}
 .btn.primary{background:var(--accent-2);border-color:var(--accent-2);color:#fff}
-.export-area{width:100%;min-height:300px;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;
-  background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px;color:var(--ink);white-space:pre;overflow:auto}
-.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--ground);
-  padding:10px 18px;border-radius:10px;font-size:13px;box-shadow:var(--shadow-lg);z-index:80;opacity:0;transition:opacity .2s;pointer-events:none}
+.seg{display:flex;gap:7px;margin-bottom:12px}
+.seg button{border:1px solid var(--line);background:var(--surface);border-radius:20px;padding:7px 15px;font-size:13px;color:var(--ink-2);font-weight:600}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.export-area{width:100%;min-height:320px;font-family:ui-monospace,Consolas,monospace;font-size:12px;
+  background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--ink);white-space:pre;overflow:auto}
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--ground);
+  padding:12px 22px;border-radius:12px;font-size:14px;box-shadow:var(--shadow-lg);z-index:80;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.show{opacity:1}
-@media (max-width:760px){
-  .tiles{grid-template-columns:repeat(2,1fr)}
-  .row{grid-template-columns:1fr}
-  .row .right{justify-self:start;width:100%;justify-content:space-between}
-  .toolbar{position:static}
+
+/* Mobile: table -> cards */
+@media (max-width:820px){
+  .wrap{padding:20px 15px 80px}
+  .hero{grid-template-columns:1fr;gap:12px}
+  .hstat{padding:18px 20px}
+  .hstat .v{font-size:34px}
+  .fields{grid-template-columns:1fr 1fr;gap:12px}
+  .head h1{font-size:24px}
+  .fbar{grid-template-columns:92px 1fr auto;gap:10px}
+  .fbar .val{min-width:96px;font-size:12.5px}
+  table,thead,tbody,tr,td{display:block}
+  thead{display:none}
+  table{min-width:0}
+  .tablewrap{overflow:visible;border-radius:0 0 14px 14px}
+  tbody tr.prow{padding:14px 16px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center}
+  tbody tr.prow:nth-child(4n+1){background:transparent}
+  tbody td{padding:0;border:none;display:block}
+  td.c-name{grid-column:1/2}
+  td.c-status{grid-column:2/3;text-align:right}
+  td.c-task{grid-column:1/-1;color:var(--ink-3)}
+  td.c-budget{grid-column:1/2}
+  td.c-spent{display:none}
+  td.c-fund{grid-column:2/3;text-align:right}
+  td.c-fund .fundcell{justify-content:flex-end}
+  tr.detail>td{display:block}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:480px){ .fields{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
 </style>
 
 <div class="wrap">
@@ -160,40 +218,39 @@ select:focus{outline:2px solid var(--accent-2)}
     <div>
       <div class="eyebrow">동양미래대학교 · 전문대학 혁신지원사업 (3주기)</div>
       <h1>분야별 프로그램 정리 대시보드</h1>
-      <div class="sub">2차년도(2026) 기준 · 계획서에 언급된 <b>모든 프로그램</b>을 분야별로 — 예산이 편성되지 않은 프로그램까지 빠짐없이.</div>
-      <div class="meta" id="metaline"></div>
+      <div class="sub">2차년도(2026) 기준 · 계획서에 언급된 <b>모든 프로그램</b>을 분야별로 — 예산 미편성 프로그램과 재원(혁신·교비·RISE 등)까지 한눈에. 각 행을 누르면 추진 내용·1차년도 실적이 펼쳐집니다.</div>
     </div>
     <div class="right-top">
       <span class="viewbadge">공유용 보기 전용 · 기준일 2026-09-15</span>
-      <button class="theme-btn" id="themeBtn" title="테마 전환">◐ 테마</button>
+      <button class="theme-btn" id="themeBtn">◐ 밝게·어둡게</button>
     </div>
   </header>
 
-  <section class="tiles" id="tiles"></section>
-  <div class="fundsum" id="fundSummary"></div>
+  <!-- HERO -->
+  <section class="hero" id="hero"></section>
 
-  <div class="alert">
-    <div class="ic">!</div>
-    <div>
-      <div class="t">예산 미편성 프로그램 — 이 대시보드의 핵심</div>
-      <div class="d" id="alertText"></div>
-    </div>
-  </div>
+  <!-- 분야별 -->
+  <div class="blocktitle">분야별 현황</div>
+  <section class="fields" id="fields"></section>
 
+  <!-- 재원별 -->
+  <div class="blocktitle">재원별 분포</div>
+  <section class="fundchart" id="fundchart"></section>
+
+  <!-- Toolbar -->
   <div class="toolbar">
-    <div class="search">
-      <span class="mag">⌕</span>
-      <input id="q" type="search" placeholder="프로그램·전략·과제·부서 검색" autocomplete="off">
-    </div>
+    <div class="search"><span class="mag">⌕</span><input id="q" type="search" placeholder="프로그램·전략·과제·부서·재원 검색" autocomplete="off"></div>
     <select id="fStatus"><option value="">예산상태 전체</option><option value="편성">예산 편성</option><option value="미편성">예산 미편성</option></select>
     <select id="fOrig"><option value="">원영역 전체</option></select>
     <select id="fFund"><option value="">재원 전체</option></select>
     <button class="btn" id="expBtn">↧ 내보내기</button>
   </div>
-  <div class="chipset" id="fieldChips" style="margin-top:10px"></div>
-  <div class="count-line" id="countLine"></div>
+  <div class="countbar" id="countbar"></div>
 
   <main id="list"></main>
+  <div style="margin-top:28px;font-size:12px;color:var(--ink-3);line-height:1.7">
+    원천: 1차년도 성과평가보고서(2026.5) + 2차년도 예산 편성(안, 2026.9.10) · 재원 판정 근거: 편성예산&gt;0=혁신, 「타사업 연계」=외부재원(RISE·경기공유·SCOUT 등), 본문 명시분만 교비 · 근거 불명확 3건은 「확인필요」 표기.
+  </div>
 </div>
 
 <div id="modalRoot"></div>
@@ -203,27 +260,23 @@ select:focus{outline:2px solid var(--accent-2)}
 const SEED = [{"id": "p01", "field2026": "교육혁신(통합)", "origArea": "교육혁신", "strategy": "유연 교육제도 활성화", "task": "열린 학과운영", "code": "1_1_1", "name": "자유전공학과 실습재료 지원", "budget": 2000000, "spent": 1912000, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "O (부트캠프)", "note": "", "kind": "program", "seq": 1, "funding": ["혁신", "기타"]}, {"id": "p02", "field2026": "교육혁신(통합)", "origArea": "교육혁신", "strategy": "생애설계형 학생지도 실천", "task": "지도교수 시스템 내실화", "code": "1_2_1", "name": "지도교수 학생지도 지원", "budget": 14000000, "spent": 1994010, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 2, "funding": ["혁신"]}, {"id": "p03", "field2026": "교육혁신(통합)", "origArea": "교육혁신", "strategy": "생애설계형 학생지도 실천", "task": "데이터기반 맞춤형 진로지도", "code": "1_2_2", "name": "대학생활적응 진로 프로그램 지원", "budget": 38300000, "spent": 10154920, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 3, "funding": ["혁신"]}, {"id": "p04", "field2026": "교육혁신(통합)", "origArea": "교육혁신", "strategy": "생애설계형 학생지도 실천", "task": "심리상담 체제 고도화", "code": "1_2_3", "name": "심리상담 프로그램 운영 지원", "budget": 25200000, "spent": 8800000, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 4, "funding": ["혁신"]}, {"id": "p05", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "체험형 실습교육 활성화", "task": "핵심직무 기반 교육", "code": "2_1_1_1", "name": "강사 강사료 지원", "budget": 501308000, "spent": 249240000, "status": "편성", "dept": "교무입학처", "fundCat": "1. 인건비", "dev": "D", "linkOther": "X", "note": "", "kind": "program", "seq": 5, "funding": ["혁신"]}, {"id": "p06", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "체험형 실습교육 활성화", "task": "핵심직무 기반 교육", "code": "2_1_1_2", "name": "강사 처우개선 사업 운영", "budget": 115800000, "spent": 32016000, "status": "편성", "dept": "교무입학처", "fundCat": "1. 인건비", "dev": "A", "linkOther": "X", "note": "", "kind": "program", "seq": 6, "funding": ["혁신"]}, {"id": "p07", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "체험형 실습교육 활성화", "task": "핵심직무 기반 교육", "code": "2_1_1_3", "name": "핵심직무 기반 교육과정 역량교과목 인증제 지원", "budget": 5000000, "spent": 300000, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "X", "note": "", "kind": "program", "seq": 7, "funding": ["혁신"]}, {"id": "p08", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "체험형 실습교육 활성화", "task": "핵심직무 기반 교육", "code": "2_1_1_4", "name": "학사 교육과정 개발·개편 지원 및 질관리", "budget": 164000000, "spent": 848500, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "X", "note": "", "kind": "program", "seq": 8, "funding": ["혁신"]}, {"id": "p09", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "체험형 실습교육 활성화", "task": "핵심직무 기반 교육", "code": "2_1_1_5", "name": "학사학위 전공심화과정 수기공모전", "budget": 2000000, "spent": 0, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 9, "funding": ["혁신"]}, {"id": "p10", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "체험형 실습교육 활성화", "task": "성취감을 느끼는 실습교육", "code": "2_1_3", "name": "실험실습재료 지원", "budget": 679351933, "spent": 540018360, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "X", "note": "전년도 이월금 포함", "kind": "program", "seq": 10, "funding": ["혁신"]}, {"id": "p11", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "체험형 실습교육 활성화", "task": "학과별 창업교육 시행", "code": "2_1_4", "name": "창업교과목 지원", "budget": 5000000, "spent": 4008820, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "O (SCOUT)", "note": "", "kind": "program", "seq": 11, "funding": ["혁신", "SCOUT"]}, {"id": "p12", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "교육 콘텐츠 개발형 교원 확충", "task": "PBL에 전문성이 있는 교수", "code": "2_2_1_1", "name": "교원 직무능력 역량 강화 지원 사업 운영", "budget": 16000000, "spent": 5115000, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "D", "linkOther": "X", "note": "", "kind": "program", "seq": 12, "funding": ["혁신"]}, {"id": "p13", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "교육 콘텐츠 개발형 교원 확충", "task": "PBL에 전문성이 있는 교수", "code": "2_2_1_2", "name": "교수 강의역량 향상 프로그램", "budget": 29500000, "spent": 0, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "X", "note": "", "kind": "program", "seq": 13, "funding": ["혁신"]}, {"id": "p14", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "교육 콘텐츠 개발형 교원 확충", "task": "교육콘텐츠를 개발하는 교수", "code": "2_2_2", "name": "원격수업 교육콘텐츠 개발 사업", "budget": 61800000, "spent": 30900000, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "X", "note": "", "kind": "program", "seq": 14, "funding": ["혁신"]}, {"id": "p15", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "자존감 강화", "code": "2_3_2", "name": "교양교과목을 통한 나의 성장 스토리 공모전", "budget": 5000000, "spent": 160000, "status": "편성", "dept": "교양과", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 15, "funding": ["혁신"]}, {"id": "p16", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "자기주도학습 활동 강화", "code": "2_3_4_1", "name": "학습공동체(전공튜터링) 프로그램(장학금)", "budget": 65000000, "spent": 31050000, "status": "편성", "dept": "교무입학처", "fundCat": "2. 장학금 · 3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 16, "funding": ["혁신"]}, {"id": "p17", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "자기주도학습 활동 강화", "code": "2_3_4_2", "name": "학습법 특강 프로그램", "budget": 5000000, "spent": 0, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 17, "funding": ["혁신"]}, {"id": "p18", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "자기주도학습 활동 강화", "code": "2_3_4_3", "name": "기초학습능력진단 및 향상 지원 프로그램", "budget": 13100000, "spent": 0, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 18, "funding": ["혁신"]}, {"id": "p19", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "글로벌 역량 강화", "code": "2_3_5_1", "name": "어학능력 향상 프로그램 운영", "budget": 100000000, "spent": 19980000, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 19, "funding": ["혁신"]}, {"id": "p20", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "글로벌 역량 강화", "code": "2_3_5_2", "name": "해외전공연수 프로그램", "budget": 240000000, "spent": 0, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 20, "funding": ["혁신"]}, {"id": "p21", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "취업역량 강화", "code": "2_3_6_1", "name": "전공 능력 강화 프로그램 운영", "budget": 87750000, "spent": 17984550, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 21, "funding": ["혁신"]}, {"id": "p22", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "취업역량 강화", "code": "2_3_6_2", "name": "취업 활동 지원 프로그램 운영", "budget": 275000000, "spent": 97300000, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 22, "funding": ["혁신"]}, {"id": "p23", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "취업역량 강화", "code": "2_3_6_3", "name": "취업 역량 강화 프로그램 운영", "budget": 100000000, "spent": 58660000, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 23, "funding": ["혁신"]}, {"id": "p24", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "취업역량 강화", "code": "2_3_6_4", "name": "멘토링 프로그램 운영", "budget": 9600000, "spent": 2400000, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 24, "funding": ["혁신"]}, {"id": "p25", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "취업역량 강화", "code": "2_3_6_5", "name": "전공분야 특화 교육 프로그램 지원", "budget": 18000000, "spent": 9020000, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "X", "note": "", "kind": "program", "seq": 25, "funding": ["혁신"]}, {"id": "p26", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "프로젝트 제작활동 강화", "code": "3_1_1_1", "name": "산학협력 교과목(주문식 교육, 캡스톤디자인) 운영", "budget": 200000000, "spent": 73203070, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "C", "linkOther": "X", "note": "", "kind": "program", "seq": 26, "funding": ["혁신"]}, {"id": "p27", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "프로젝트 제작활동 강화", "code": "3_1_1_2", "name": "동양미래 EXPO 참가 지원", "budget": 60000000, "spent": 25066288, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "A", "linkOther": "X", "note": "", "kind": "program", "seq": 27, "funding": ["혁신"]}, {"id": "p28", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "프로젝트 제작활동 강화", "code": "3_1_1_3", "name": "P.D.Lab 지원", "budget": 75000000, "spent": 13825198, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 28, "funding": ["혁신"]}, {"id": "p29", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "프로젝트 제작활동 강화", "code": "3_1_1_4", "name": "작품전 지원 프로그램 운영", "budget": 205420000, "spent": 24220790, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 29, "funding": ["혁신"]}, {"id": "p30", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "프로젝트 제작활동 강화", "code": "3_1_1_5", "name": "DMU 경진대회", "budget": 85155000, "spent": 38335200, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 30, "funding": ["혁신"]}, {"id": "p31", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "프로젝트 제작활동 강화", "code": "3_1_1_6", "name": "동양미래 EXPO", "budget": 181000000, "spent": 59400000, "status": "편성", "dept": "기획혁신처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 31, "funding": ["혁신"]}, {"id": "p32", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "프로젝트 제작활동 강화", "code": "3_1_1_7", "name": "전공역량 강화 교외 경진대회 지원", "budget": 50000000, "spent": 7290134, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 32, "funding": ["혁신"]}, {"id": "p33", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "현장 실무 역량 강화", "code": "3_1_2_1", "name": "현장견학 및 전공현장체험 프로그램 운영", "budget": 54372500, "spent": 4874240, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 33, "funding": ["혁신"]}, {"id": "p34", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "현장 실무 역량 강화", "code": "3_1_2_2", "name": "현장실습운영", "budget": 30000000, "spent": 12400000, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 34, "funding": ["혁신"]}, {"id": "p35", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "현장 중심 교육 실습실 구축", "code": "3_1_3_1", "name": "학부(과) 실습실 환경개선", "budget": 523900000, "spent": 473446353, "status": "편성", "dept": "기획혁신처", "fundCat": "4. 교육·연구 환경개선비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 35, "funding": ["혁신"]}, {"id": "p36", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "현장 중심 교육 실습실 구축", "code": "3_1_3_2", "name": "학부(과) 실습실 집기비품", "budget": 88000000, "spent": 81240000, "status": "편성", "dept": "기획혁신처", "fundCat": "4. 교육·연구 환경개선비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 36, "funding": ["혁신"]}, {"id": "p37", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "산업체 수요를 반영한 인재 양성", "task": "현장 중심 교육 실습실 구축", "code": "3_1_3_3", "name": "실험실습기자재 지원", "budget": 778500000, "spent": 475986000, "status": "편성", "dept": "학생처", "fundCat": "5. 실험·실습 장비 및 기자재 구입·운영비", "dev": "A", "linkOther": "X", "note": "", "kind": "program", "seq": 37, "funding": ["혁신"]}, {"id": "p38", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "지산학협력 인프라 활성화", "task": "지역∙산학협력 네트워크 구축", "code": "3_2_1_1", "name": "산학협력 플랫폼고도화", "budget": 16000000, "spent": 0, "status": "편성", "dept": "혁신지원사업단", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "C", "linkOther": "X", "note": "", "kind": "program", "seq": 38, "funding": ["혁신"]}, {"id": "p39", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "지산학협력 인프라 활성화", "task": "지역∙산학협력 네트워크 구축", "code": "3_2_1_2", "name": "산학협력 네트워크 구축 프로그램 운영", "budget": 3000000, "spent": 743800, "status": "편성", "dept": "학생처", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "B", "linkOther": "X", "note": "", "kind": "program", "seq": 39, "funding": ["혁신"]}, {"id": "p40", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "교육 기반 지역 협력 활동", "task": "지역사회 기여", "code": "3_3_1_1", "name": "지역사회 연계 프로그램", "budget": 15000000, "spent": 814180, "status": "편성", "dept": "혁신지원사업단", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "C", "linkOther": "X", "note": "", "kind": "program", "seq": 40, "funding": ["혁신"]}, {"id": "p41", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "학생 다양화 기반 구축", "task": "취창업이 가능한 평생교육 역량 강화", "code": "4_1_1", "name": "평생교육 프로그램", "budget": 15000000, "spent": 0, "status": "편성", "dept": "혁신지원사업단", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "C", "linkOther": "O (RISE, 마이컬리지)", "note": "", "kind": "program", "seq": 41, "funding": ["혁신", "RISE"]}, {"id": "p42", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "학생 다양화 기반 구축", "task": "핵심직무 기반 재직자 교육\n역량 강화", "code": "4_1_2", "name": "재직자 교육 프로그램", "budget": 12702500, "spent": 1089760, "status": "편성", "dept": "혁신지원사업단", "fundCat": "3. 교육·연구 프로그램 개발·운영비", "dev": "C", "linkOther": "O (RISE)", "note": "", "kind": "program", "seq": 42, "funding": ["혁신", "RISE"]}, {"id": "p43", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "학생 다양화 기반 구축", "task": "외국인 유학생 교육 역량 강화", "code": "4_1_3", "name": "고등직업해외인재유치협의회", "budget": 5000000, "spent": 0, "status": "편성", "dept": "학생처", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "D", "linkOther": "X", "note": "", "kind": "program", "seq": 43, "funding": ["혁신"]}, {"id": "p44", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "대학 디지털 전환 추진", "task": "대학 디지털 혁신 인프라 구축", "code": "4_2_2_1", "name": "차세대 학습관리시스템(eClass) 유지보수", "budget": 75600000, "spent": 0, "status": "편성", "dept": "교무입학처", "fundCat": "3. 교육·연구 프로그램 개발·운영비 · 4. 교육·연구 환경개선비", "dev": "A", "linkOther": "X", "note": "환경개선비 기준 편성(프로그램개발비 항목은 0원)", "kind": "program", "seq": 44, "funding": ["혁신"]}, {"id": "p45", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "대학 디지털 전환 추진", "task": "대학 디지털 혁신 인프라 구축", "code": "4_2_2_2", "name": "AI·DX 경진 대회", "budget": 1500000, "spent": 0, "status": "편성", "dept": "사무처", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "D", "linkOther": "X", "note": "", "kind": "program", "seq": 45, "funding": ["혁신"]}, {"id": "p46", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "대학 브랜드 강화", "task": "데이터 기반 성과관리", "code": "4_3_1", "name": "2025학년도 대학 만족도 조사", "budget": 17500000, "spent": 0, "status": "편성", "dept": "기획혁신처", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "D", "linkOther": "X", "note": "", "kind": "program", "seq": 46, "funding": ["혁신"]}, {"id": "p47", "field2026": "사업운영·간접비", "origArea": "사업관리 및 운영", "strategy": "사업관리", "task": "사업관리", "code": "5_1_1", "name": "전담인력 인건비", "budget": 756443190, "spent": 204883490, "status": "편성", "dept": "혁신지원사업단", "fundCat": "1. 인건비", "dev": "D", "linkOther": "", "note": "전년도 이월금 포함", "kind": "program", "seq": 47, "funding": ["혁신"]}, {"id": "p48", "field2026": "사업운영·간접비", "origArea": "사업관리 및 운영", "strategy": "사업관리", "task": "사업관리", "code": "5_1_2", "name": "위원회 운영 지원", "budget": 2500000, "spent": 0, "status": "편성", "dept": "혁신지원사업단", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "D", "linkOther": "", "note": "", "kind": "program", "seq": 48, "funding": ["혁신"]}, {"id": "p49", "field2026": "사업운영·간접비", "origArea": "사업관리 및 운영", "strategy": "사업관리", "task": "사업관리", "code": "5_1_3", "name": "사업단 관리 운영비", "budget": 30000000, "spent": 18589400, "status": "편성", "dept": "혁신지원사업단", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "D", "linkOther": "", "note": "", "kind": "program", "seq": 49, "funding": ["혁신"]}, {"id": "p50", "field2026": "사업운영·간접비", "origArea": "사업관리 및 운영", "strategy": "사업관리", "task": "사업관리", "code": "5_1_4", "name": "AID 선도대학 컨소시엄 사업비", "budget": 0, "spent": 0, "status": "미편성", "dept": "교무입학처", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "A", "linkOther": "", "note": "사업 미진행으로 전액 반납(계획 1천만원)", "kind": "program", "seq": 50, "funding": ["혁신"]}, {"id": "p51", "field2026": "사업운영·간접비", "origArea": "사업관리 및 운영", "strategy": "사업관리", "task": "사업관리", "code": "5_1_5", "name": "대학 관리운영 지원", "budget": 480000000, "spent": 282249670, "status": "편성", "dept": "사무처", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "D", "linkOther": "", "note": "", "kind": "program", "seq": 51, "funding": ["혁신"]}, {"id": "p52", "field2026": "사업운영·간접비", "origArea": "사업관리 및 운영", "strategy": "사업관리", "task": "사업관리", "code": "5_1_6", "name": "실험실습실 안전관리", "budget": 20000000, "spent": 407000, "status": "편성", "dept": "사무처", "fundCat": "6. 그 밖의 사업운영 경비", "dev": "D", "linkOther": "", "note": "", "kind": "program", "seq": 52, "funding": ["혁신"]}, {"id": "p53", "field2026": "사업운영·간접비", "origArea": "사업관리 및 운영", "strategy": "사업관리", "task": "사업관리", "code": "5_1_7", "name": "대학 행정인력 인건비 지원", "budget": 282892000, "spent": 0, "status": "편성", "dept": "사무처", "fundCat": "1. 인건비", "dev": "D", "linkOther": "", "note": "", "kind": "program", "seq": 53, "funding": ["혁신"]}, {"id": "p54", "field2026": "사업운영·간접비", "origArea": "간접비", "strategy": "간접비", "task": "간접비", "code": "7_1_1", "name": "간접비", "budget": 335463569, "spent": 335463569, "status": "편성", "dept": "혁신지원사업단", "fundCat": "7. 간접비 징수", "dev": "D", "linkOther": "", "note": "", "kind": "program", "seq": 54, "funding": ["혁신"]}, {"id": "p55", "field2026": "교육혁신(통합)", "origArea": "교육혁신", "strategy": "유연 교육제도 활성화", "task": "학과 구조개편", "code": "", "name": "학과 중장기발전계획 수립·구조개편 (신설학과 정책연구)", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "X", "note": "실무 중심 직업교육 체제 확립을 위한 학과 구조·교육과정 개편. 학과별 편제정원·교원 적정화, 신설학과 발굴 정책연구가 핵심. 【1차년도 실적】24개 학과(교양과 포함) 중장기발전계획 수립, 편제정원·교원 적정화 검토, 신설학과 발굴 정책연구 1건 수행. 【2026】중장기계획 시행, 10개 학과 편제정원·교원 적정화 수립, 신설학과 실행계획·재원 로드맵 조기 확정. 본 사업 예산 미편성(정책연구·행정 중심 과제). 〔출처: 1차년도 성과평가보고서(2026.5)·2차년도 초안〕", "kind": "program", "seq": 55, "funding": ["확인필요"]}, {"id": "p56", "field2026": "교육혁신(통합)", "origArea": "교육혁신", "strategy": "유연 교육제도 활성화", "task": "미래형 교수법 적용 확대", "code": "", "name": "미래형 교수법(플립드·블랜디드·PBL) 적용 확대", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "O (RISE)", "note": "플립드·블랜디드·집중학기 등 미래형 교수법을 교육과정 전반으로 확산. 【1차년도 실적】블랜디드 교과목 18건(목표 대비 683%), AI 활용 교과목 9개 대상 AI 활용 수업 사례집 제작(RISE 연계·예산 소요 없음), 과정평가형 PBL 교과목 18개(14개 학과) 개발. 본 사업 예산 미편성(AI 활용분은 RISE 사업 연계). 〔출처: 1차년도 성과평가보고서(2026.5)·2차년도 초안〕", "kind": "program", "seq": 56, "funding": ["RISE"]}, {"id": "p57", "field2026": "교육혁신(통합)", "origArea": "교육혁신", "strategy": "유연 교육제도 활성화", "task": "교양교육 강화", "code": "", "name": "전공연계 교양 콘텐츠 개발·교양체계 개편", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "X", "note": "AI 시대 교양필수 교과 적합성 검토·개정 및 교양 영역명 재편, 6개 학부 전공연계 교양 온라인 콘텐츠 개발, 교강사 협의회 워크숍 정례화, 유한대·인하공전 등 대면 학점교류 5개 이상 확대. 【1차년도】전공연계 교양콘텐츠 개발 기획, 교강사 협의회 워크숍 개최. 본 사업 예산 미편성. 〔출처: 2차년도 자율혁신계획서 초안(2026)〕", "kind": "program", "seq": 57, "funding": ["확인필요"]}, {"id": "p58", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "체험형 실습교육 활성화", "task": "PBL중심의 미래형 교수법 강화", "code": "", "name": "과정평가형 PBL 수업 운영·교수법 강화", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "X", "note": "교원의 PBL 설계·운영 역량을 과정평가형 PBL 수업으로 체계화하고 타 학과로 확산. 【1차년도 실적】과정평가형 PBL 교과목 18개(14개 학과) 개발, PBL 교과목 운영 규칙 제정(2025.10.27.), 목표 대비 360% 달성. PBL 특강·컨설팅은 교수학습지원센터 지원. 본 사업 예산 미편성(관련 예산은 교수 강의역량 향상 프로그램 등에 별도 편성). 〔출처: 1차년도 성과평가보고서(2026.5)·2차년도 초안〕", "kind": "program", "seq": 58, "funding": ["확인필요"]}, {"id": "p59", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "사회적응력 강화", "code": "", "name": "사회적응력 강화 — 해외봉사·사회봉사활동 운영", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "X", "note": "학생의 사회적응력·정서적 안정·공동체 의식 함양을 위한 해외봉사 및 사회봉사활동(학생처-학생활동지원팀, 교외·교비 연계). 【1차년도 실적】해외봉사 학생임원 18명 4박5일 안전 운영(교비 3,245만원), 사회봉사 'DMU 줌김' 프로그램 123명 참여(계획 80명 초과). 본 혁신지원사업 예산 미편성 — 교비로 운영. 〔출처: 1차년도 성과평가보고서(2026.5)〕", "kind": "program", "seq": 59, "funding": ["교비"]}, {"id": "p60", "field2026": "교육혁신(통합)", "origArea": "고등직업교육혁신", "strategy": "학생 역량 강화", "task": "활기찬 캠퍼스 조성", "code": "", "name": "활기찬 캠퍼스 조성 — 노들축제·노들체전 운영", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "X", "note": "심리적 안정·소통 교류의 대학 문화 조성을 위한 노들축제·노들체전 운영(교비·학생회비 연계). 【1차년도 실적】노들체전(교직원 체육대회 포함) 및 노들축제 운영, 학생회비 납부 여부와 무관하게 전 재학생 참여 유도. 본 혁신지원사업 예산 미편성 — 교비·학생회비로 운영. 〔출처: 1차년도 성과평가보고서(2026.5)〕", "kind": "program", "seq": 60, "funding": ["교비", "기타"]}, {"id": "p61", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "지산학협력 인프라 활성화", "task": "기업 상생 지원", "code": "", "name": "기업 상생 지원 — 기업 기술지원 프로그램(RISE)", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "O (RISE)", "note": "학과 교수진이 과제책임자가 되어 기업의 기술 애로를 진단하고 공동 프로젝트로 해결하는 기업 기술지원 프로그램, 학생연구원 참여로 실무형 연구·채용 연계 강화. 【1차년도】본 사업 집행 0원, 서울 RISE 사업비 약 99백만원 집행. 본 사업은 산학협력 네트워크·플랫폼 '기반 구축'만 담당하고 실행 성과(특허·논문·채용)는 RISE로 귀속(중복성과 방지). 예산 미편성. 〔출처: 2차년도 자율혁신계획서 초안(2026)〕", "kind": "program", "seq": 61, "funding": ["RISE"]}, {"id": "p62", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "교육 기반 지역 협력 활동", "task": "초중고 진로연계 평생교육", "code": "", "name": "초중고 진로연계 평생교육(대학 인프라 활용)", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "O (경기공유학교)", "note": "반도체 클린룸·로봇·바이오 실습실 등 대학 인프라로 중·고교에서 개설이 어려운 맞춤형 진로교육 제공. 【1차년도】본 사업 0원, 경기공유학교(경기 광명교육지원청) 연계 36백만원 — 대학연계형 9건 130명·지역맞춤형 2건 31명 이수, 학부모·교원 연수 4회. 본 사업 예산 미편성(경기공유학교 사업으로 운영). 〔출처: 2차년도 자율혁신계획서 초안(2026)〕", "kind": "program", "seq": 62, "funding": ["경기공유대학"]}, {"id": "p63", "field2026": "산학·지역협력혁신", "origArea": "산학·지역협력혁신", "strategy": "교육 기반 지역 협력 활동", "task": "상호문화도시(다문화가정)특화 교육", "code": "", "name": "상호문화도시 특화 교육(다문화가정 학습지원·한국어 예비학교)", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "O (RISE, 한국어예비)", "note": "구로진로직업체험센터·대안교육기관(움틈학교 등) 연계 상호문화가정 자녀 비교과 학습지원 및 서남권 이주학생 대상 한국어 예비학교 운영. 【1차년도】본 사업 0원 — 서울 RISE 사업비·서울형 한국어 예비학교 사업비로 운영. 본 사업 예산 미편성. 〔출처: 2차년도 자율혁신계획서 초안(2026)〕", "kind": "program", "seq": 63, "funding": ["RISE", "기타"]}, {"id": "p64", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "학생 다양화 기반 구축", "task": "AI·DX 종합 추진 체계 구축", "code": "", "name": "AI·DX 종합 추진 체계 구축(총괄조직·로드맵)", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "O (RISE)", "note": "AI·DX 총괄조직(AI·DX 혁신센터) 신설, AI·DX 로드맵 확정, AI 활용 교과목 인증제·교양 AI·DX 리터러시 전교생 이수제 추진. 【1차년도】본 사업 0원·RISE 연계 — 산업체·구성원 FGI 2건으로 센터 구축 준비, AI+X 전략사업 3건 지원(RISE), 정책연구 수행·AI 활용 수업 사례집 9건 제작. 본 사업은 종합추진체계·거버넌스 기반만 담당(AID 사업과 역할 분리), 예산 미편성. 〔출처: 2차년도 자율혁신계획서 초안(2026)〕", "kind": "program", "seq": 64, "funding": ["RISE"]}, {"id": "p65", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "대학 브랜드 강화", "task": "대학 간 공유협력 강화", "code": "", "name": "대학 간 공유·협력 네트워크 활성화", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "O (RISE, SCOUT)", "note": "권역·서울–지방·전문대–일반대 다층 협력 모델 구축, 마이크로전공트랙 기반 공동 교육과정(12학점 이상) 운영. 【1차년도】본 사업 0원·교비/RISE 연계 — 수도권 3개 대학 교류회 1건, 디지텍 협의회 4건·SCOUT 3건, RISE 드론 컨소시엄(서울대·동의과학대) 3건·총신대 협약 1건. 본 사업 예산 미편성. 〔출처: 2차년도 자율혁신계획서 초안(2026)〕", "kind": "program", "seq": 65, "funding": ["RISE", "SCOUT", "교비"]}, {"id": "p66", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "대학 브랜드 강화", "task": "대학 성과 홍보·확산", "code": "", "name": "대학 성과 홍보·확산(디자인·브랜드 기반)", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "X", "note": "대학 아이덴티티 기반 디자인·홍보 콘텐츠 확산 및 SNS 홍보 강화. 【1차년도】본 사업 0원·교비/RISE 연계 — 디자인·홍보 만족도 83.8점, 개교 60주년 기념식 등 홍보행사 10회, 대학 BI 적용 홍보용품 11종, 캠퍼스 투어 20건 837명. 2026년 '대학 간 공유·협력 강화' 세부내용으로 이관. 본 사업 예산 미편성. 〔출처: 2차년도 자율혁신계획서 초안(2026)〕", "kind": "program", "seq": 66, "funding": ["교비", "RISE"]}, {"id": "p67", "field2026": "자율혁신", "origArea": "자율혁신", "strategy": "대학 브랜드 강화", "task": "사회적 가치 실현", "code": "", "name": "사회적 가치 실현(운영 투명성·참여문화·사회봉사)", "budget": 0, "spent": 0, "status": "미편성", "dept": "", "fundCat": "", "dev": "", "linkOther": "X", "note": "대학 운영 투명성·책무성 강화, 구성원 참여 문화 제도화, 지역 사회봉사 활성화(서식 필수 과제). 【1차년도 실적】대학평의원회·등록금심의위원회·기금운용심의회 등 3개 위원회 구성원 대표 참여 8건, 외부 회계법인 결산 회계감사·결과 공개 1건, 구성원 사회봉사 참여 418명(전년 56명 대비 대폭 상승). 본 사업 예산 미편성(교비·회계감사 연계). 〔출처: 1차년도 성과평가보고서(2026.5)·2차년도 초안〕", "kind": "program", "seq": 67, "funding": ["교비"]}];
 const FIELDS = ["교육혁신(통합)","산학·지역협력혁신","자율혁신","사업운영·간접비"];
 const FCVAR = {"교육혁신(통합)":"--f-edu","산학·지역협력혁신":"--f-ind","자율혁신":"--f-aut","사업운영·간접비":"--f-ops"};
-const FSOFT = {"교육혁신(통합)":"--f-edu-soft","산학·지역협력혁신":"--f-ind-soft","자율혁신":"--f-aut-soft","사업운영·간접비":"--f-ops-soft"};
 const FUNDS = ["혁신","교비","RISE","경기공유대학","SCOUT","기타","확인필요"];
 const FUNDVAR = {"혁신":"--accent","교비":"--good","RISE":"--f-aut","경기공유대학":"--f-ind","SCOUT":"--f-edu","기타":"--ink-3","확인필요":"--warn"};
 const FUNDSOFT = {"혁신":"--accent-soft","교비":"--good-soft","RISE":"--f-aut-soft","경기공유대학":"--f-ind-soft","SCOUT":"--f-edu-soft","기타":"--surface-2","확인필요":"--warn-soft"};
-const fundBadge = f => `<span class="badge fund" style="background:var(${FUNDSOFT[f]});color:var(${FUNDVAR[f]})"><span style="width:6px;height:6px;border-radius:2px;background:var(${FUNDVAR[f]})"></span>${f}</span>`;
-const fundsOf = p => (Array.isArray(p.funding)&&p.funding.length)?p.funding:["확인필요"];
 const won = n => (n||0).toLocaleString("ko-KR")+"원";
 const eok = n => n>=100000000 ? (n/100000000).toFixed(n>=1000000000?1:2)+"억" : n>=10000 ? Math.round(n/10000).toLocaleString()+"만" : (n||0).toLocaleString();
+const esc = s => (s==null?"":String(s)).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const fundsOf = p => (Array.isArray(p.funding)&&p.funding.length)?p.funding:["확인필요"];
+const fundBadge = f => `<span class="badge" style="background:var(${FUNDSOFT[f]});color:var(${FUNDVAR[f]})"><span class="d" style="background:var(${FUNDVAR[f]})"></span>${f}</span>`;
 
 let programs = SEED.map(x=>({...x}));
-let filt={q:"",status:"",orig:"",field:"",fund:""};
+let filt={q:"",status:"",orig:"",fund:""};
+let sortKey=null, sortDir=1;
+const openRows=new Set();
 
-function summary(){
-  const s={}; FIELDS.forEach(f=>s[f]={total:0,ok:0,no:0,budget:0,spent:0});
-  programs.forEach(p=>{ const t=s[p.field2026]; if(!t)return; t.total++; t.budget+=p.budget||0; t.spent+=p.spent||0;
-    if(p.status==="편성")t.ok++; else t.no++; });
-  return s;
-}
+/* ---- derived ---- */
 function visible(){
   return programs.filter(p=>{
-    if(filt.field && p.field2026!==filt.field) return false;
     if(filt.status && p.status!==filt.status) return false;
     if(filt.orig && p.origArea!==filt.orig) return false;
     if(filt.fund && !fundsOf(p).includes(filt.fund)) return false;
@@ -233,182 +286,172 @@ function visible(){
     return true;
   });
 }
-function render(){ renderTiles(); renderFundSummary(); renderAlert(); renderList(); renderMeta(); }
-function renderFundSummary(){
-  const el=document.getElementById("fundSummary"); if(!el) return;
-  const c={}, b={}; FUNDS.forEach(f=>{c[f]=0;b[f]=0;});
-  programs.forEach(p=>fundsOf(p).forEach(f=>{ if(c[f]==null){c[f]=0;b[f]=0;} c[f]++; if(f==="혁신") b[f]+=p.budget||0; }));
-  let html=`<span class="hd">재원별</span>`;
-  FUNDS.forEach(f=>{ if(!c[f]) return;
-    const money = f==="혁신"? ` <small>· ${eok(b[f])}원</small>`:"";
-    html+=`<button class="fs" data-fund="${f}" title="${f} 필터"><span class="d" style="background:var(${FUNDVAR[f]})"></span>${f} <b>${c[f]}</b>${money}</button>`;
-  });
-  el.innerHTML=html;
-  el.querySelectorAll(".fs").forEach(btn=>btn.onclick=()=>{ const f=btn.dataset.fund; filt.fund = filt.fund===f?"":f; document.getElementById("fFund").value=filt.fund; render(); });
+const totals=()=>{ const tot=programs.length, ok=programs.filter(p=>p.status==="편성").length;
+  const bud=programs.reduce((a,p)=>a+(p.budget||0),0); return {tot,ok,no:tot-ok,bud}; };
+
+/* ---- render ---- */
+function render(){ renderHero(); renderFields(); renderFundChart(); renderTable(); }
+
+function renderHero(){
+  const t=totals();
+  document.getElementById("hero").innerHTML=`
+    <div class="hstat"><div class="k">전체 프로그램·과제</div><div class="v tnum">${t.tot}<small> 건</small></div><div class="sub2">4개 분야 · 예산 편성 ${t.ok}건</div></div>
+    <div class="hstat"><div class="k">편성 예산 합계 (2026)</div><div class="v tnum">${(t.bud/100000000).toFixed(2)}<small> 억원</small></div><div class="sub2">${won(t.bud)}</div></div>
+    <div class="hstat warn"><div class="k">예산 미편성</div><div class="v tnum">${t.no}<small> 건</small></div><div class="sub2">과제만 존재하거나 타사업·교비로 추진</div></div>`;
 }
-function renderMeta(){
-  const tot=programs.length, ok=programs.filter(p=>p.status==="편성").length;
-  const bud=programs.reduce((a,p)=>a+(p.budget||0),0);
-  document.getElementById("metaline").textContent =
-    `총 ${tot}개 항목 · 예산 편성 ${ok} / 미편성 ${tot-ok} · 편성 예산 합계 ${won(bud)} · 원천: 1차년도 성과평가보고서(2026.5) + 2차년도 예산편성(안, 2026.9.10)`;
-}
-function renderTiles(){
-  const s=summary(); const el=document.getElementById("tiles"); el.innerHTML="";
+function renderFields(){
+  const el=document.getElementById("fields"); el.innerHTML="";
   FIELDS.forEach(f=>{
-    const t=s[f]; const pct=t.total? Math.round(t.ok/t.total*100):0;
-    const d=document.createElement("div"); d.className="tile";
-    d.style.setProperty("--fc",`var(${FCVAR[f]})`);
-    d.innerHTML=`<div class="fname"><span class="dot"></span>${f}</div>
-      <div class="big tnum">${t.total}<small> 개 항목</small></div>
-      <div class="split"><span class="sg tnum"><b>${t.ok}</b> 편성</span><span class="sw tnum"><b>${t.no}</b> 미편성</span></div>
-      <div class="bar"><i style="width:${pct}%"></i></div>
-      <div class="money tnum">예산 ${eok(t.budget)}원</div>`;
-    d.onclick=()=>{ filt.field = filt.field===f?"":f; syncChips(); render(); window.scrollTo({top:document.querySelector('.toolbar').offsetTop-8,behavior:'smooth'}); };
+    const inF=programs.filter(p=>p.field2026===f);
+    const ok=inF.filter(p=>p.status==="편성").length, no=inF.length-ok;
+    const bud=inF.reduce((a,p)=>a+(p.budget||0),0);
+    const pct=inF.length?Math.round(ok/inF.length*100):0;
+    const d=document.createElement("div"); d.className="fcard"; d.style.setProperty("--fc",`var(${FCVAR[f]})`);
+    d.innerHTML=`<div class="fn"><span class="dot"></span>${f}</div>
+      <div class="n tnum">${inF.length}<small> 건</small></div>
+      <div class="stack"><span class="ok" style="width:${pct}%"></span></div>
+      <div class="legend"><span class="g tnum">편성 ${ok}</span><span class="w tnum">미편성 ${no}</span></div>
+      <div class="money tnum">예산 ${eok(bud)}원</div>`;
+    d.onclick=()=>{ location.hash="#sec-"+FIELDS.indexOf(f); };
     el.appendChild(d);
   });
 }
-function renderAlert(){
-  const no=programs.filter(p=>p.status==="미편성");
-  const linked=no.filter(p=>(p.linkOther||"").startsWith("O")).length;
-  document.getElementById("alertText").innerHTML =
-    `계획 체계에는 있으나 2026년 예산이 편성되지 않은 항목이 <b>${no.length}개</b>입니다. `+
-    `이 중 <b>${linked}개</b>는 다른 재정지원사업(RISE·SCOUT 등)으로 추진되어 혁신지원 예산이 붙지 않았고, 나머지는 과제만 존재하거나 반납된 항목입니다. `+
-    `아래에서 <b style="color:var(--warn)">미편성</b> 필터로 한눈에 볼 수 있습니다.`;
+function renderFundChart(){
+  const c={},b={}; FUNDS.forEach(f=>{c[f]=0;b[f]=0;});
+  programs.forEach(p=>fundsOf(p).forEach(f=>{ if(c[f]==null){c[f]=0;b[f]=0;} c[f]++; if(f==="혁신")b[f]+=p.budget||0; }));
+  const max=Math.max(...FUNDS.map(f=>c[f]||0),1);
+  let html="";
+  FUNDS.forEach(f=>{ if(!c[f]) return;
+    const w=Math.round((c[f]/max)*100);
+    const money=f==="혁신"?` <small>· ${eok(b[f])}원</small>`:"";
+    const active=filt.fund===f?'style="outline:2px solid var('+FUNDVAR[f]+');outline-offset:2px;border-radius:9px"':"";
+    html+=`<button class="fbar" data-fund="${f}" ${active} style="width:100%;border:none;background:none;padding:7px 0;text-align:left;cursor:pointer">
+      <span class="lb"><span class="d" style="background:var(${FUNDVAR[f]})"></span>${f}</span>
+      <span class="track"><span class="fill" style="width:${w}%;background:var(${FUNDVAR[f]})"></span></span>
+      <span class="val tnum"><b>${c[f]}</b>건${money}</span></button>`;
+  });
+  const el=document.getElementById("fundchart"); el.innerHTML=html;
+  el.querySelectorAll(".fbar").forEach(btn=>btn.onclick=()=>{ const f=btn.dataset.fund; filt.fund=filt.fund===f?"":f; document.getElementById("fFund").value=filt.fund; render(); });
 }
-function renderList(){
+
+const SORTERS={
+  name:(a,b)=>a.name.localeCompare(b.name,"ko"),
+  task:(a,b)=>(a.strategy+a.task).localeCompare(b.strategy+b.task,"ko"),
+  budget:(a,b)=>(a.budget||0)-(b.budget||0),
+  spent:(a,b)=>(a.spent||0)-(b.spent||0),
+  fund:(a,b)=>fundsOf(a)[0].localeCompare(fundsOf(b)[0],"ko"),
+  status:(a,b)=>a.status.localeCompare(b.status,"ko")
+};
+function renderTable(){
   const list=document.getElementById("list"); list.innerHTML="";
   const vis=visible();
-  document.getElementById("countLine").textContent = `${vis.length}개 항목 표시` + (filt.field||filt.status||filt.orig||filt.q?" (필터 적용됨)":"");
+  const active=(filt.status||filt.orig||filt.fund||filt.q);
+  document.getElementById("countbar").innerHTML = `${vis.length}개 항목 표시` + (active?` · 필터 적용됨 <button class="clearbtn" id="clearf">필터 지우기</button>`:"");
+  if(active){ const cb=document.getElementById("clearf"); if(cb) cb.onclick=clearFilters; }
   if(!vis.length){ list.innerHTML=`<div class="empty">조건에 맞는 프로그램이 없습니다.</div>`; return; }
-  FIELDS.forEach(f=>{
-    const inF=vis.filter(p=>p.field2026===f); if(!inF.length) return;
-    const sec=document.createElement("section"); sec.className="field-sec"; sec.style.setProperty("--fc",`var(${FCVAR[f]})`);
-    const okc=inF.filter(p=>p.status==="편성").length;
-    sec.innerHTML=`<div class="field-h"><span class="fdot"></span><h2>${f}</h2><span class="fc tnum">${inF.length}개 · 편성 ${okc} / 미편성 ${inF.length-okc}</span></div>`;
-    const strats=[]; const smap={};
-    inF.forEach(p=>{ const sk=(p.origArea||"")+"│"+(p.strategy||"(전략 미정)");
-      if(!smap[sk]){smap[sk]={orig:p.origArea,strategy:p.strategy,tasks:[],tmap:{}};strats.push(sk);} });
-    inF.forEach(p=>{ const sk=(p.origArea||"")+"│"+(p.strategy||"(전략 미정)"); const S=smap[sk];
-      const tk=p.task||"(과제 미정)"; if(!S.tmap[tk]){S.tmap[tk]={task:tk,link:p.linkOther,items:[]};S.tasks.push(tk);} S.tmap[tk].items.push(p); });
-    strats.forEach(sk=>{ const S=smap[sk];
-      const sd=document.createElement("div"); sd.className="strat";
-      const origTag = f==="교육혁신(통합)" ? ` <span class="badge b-orig" style="font-size:9.5px">원영역: ${S.orig}</span>` : "";
-      sd.innerHTML=`<div class="strat-h">${S.strategy||"(전략 미정)"}${origTag}</div>`;
-      S.tasks.forEach(tk=>{ const T=S.tmap[tk];
-        const tg=document.createElement("div"); tg.className="task-grp";
-        const lk = T.link && T.link.startsWith("O") ? `<span class="lk">↔ 타사업 연계 ${T.link.slice(2)}</span>` : "";
-        tg.innerHTML=`<div class="task-h">${T.task}${lk}</div>`;
-        const rows=document.createElement("div"); rows.className="rows";
-        T.items.forEach(p=>rows.appendChild(rowEl(p)));
-        tg.appendChild(rows); sd.appendChild(tg);
-      });
-      sec.appendChild(sd);
+  FIELDS.forEach((f,fi)=>{
+    let inF=vis.filter(p=>p.field2026===f); if(!inF.length) return;
+    if(sortKey){ inF=inF.slice().sort((a,b)=>SORTERS[sortKey](a,b)*sortDir); }
+    const ok=inF.filter(p=>p.status==="편성").length;
+    const sec=document.createElement("section"); sec.className="tsec"; sec.id="sec-"+fi; sec.style.setProperty("--fc",`var(${FCVAR[f]})`);
+    const ar=k=>sortKey===k?`<span class="ar">${sortDir>0?"▲":"▼"}</span>`:`<span class="ar">▼</span>`;
+    const on=k=>sortKey===k?"on":"";
+    sec.innerHTML=`<div class="tsec-h"><span class="dot"></span><h2>${f}</h2><span class="meta tnum">${inF.length}건 · 편성 ${ok} / 미편성 ${inF.length-ok}</span></div>
+      <div class="tablewrap"><table>
+        <thead><tr>
+          <th class="${on('name')}" data-k="name">프로그램명 ${ar('name')}</th>
+          <th class="${on('task')}" data-k="task">전략 · 과제 ${ar('task')}</th>
+          <th class="num ${on('budget')}" data-k="budget">편성예산 ${ar('budget')}</th>
+          <th class="num ${on('spent')}" data-k="spent">집행 / 잔액 ${ar('spent')}</th>
+          <th class="${on('fund')}" data-k="fund">재원 ${ar('fund')}</th>
+          <th class="ctr ${on('status')}" data-k="status">상태 ${ar('status')}</th>
+        </tr></thead><tbody></tbody></table></div>`;
+    const tb=sec.querySelector("tbody");
+    inF.forEach(p=>{
+      const opened=openRows.has(p.id);
+      const rem=(p.budget||0)-(p.spent||0);
+      const tr=document.createElement("tr"); tr.className="prow"+(opened?" open":"");
+      tr.innerHTML=`
+        <td class="c-name"><div class="pname"><span class="caret">▶</span><span>${esc(p.name)} ${p.code?`<span class="pcode tnum">${p.code}</span>`:""}</span></div></td>
+        <td class="c-task"><div class="ptask">${esc(p.task||"")}<div class="st">${esc(p.strategy||"")}</div></div></td>
+        <td class="c-budget num"><span class="amt tnum ${p.budget>0?"":"zero"}">${p.budget>0?eok(p.budget)+"원":"—"}</span></td>
+        <td class="c-spent num">${p.budget>0?`<span class="subamt tnum">${eok(p.spent)} · 잔 ${eok(rem)}</span>`:`<span class="subamt">—</span>`}</td>
+        <td class="c-fund"><div class="fundcell">${fundsOf(p).map(fundBadge).join("")}</div></td>
+        <td class="c-status ctr">${p.status==="편성"?`<span class="badge b-good">편성</span>`:`<span class="badge b-warn">미편성</span>`}</td>`;
+      tr.onclick=()=>toggleRow(p.id);
+      tb.appendChild(tr);
+      const dr=document.createElement("tr"); dr.className="detail"; dr.dataset.for=p.id; if(!opened) dr.style.display="none";
+      const linkInfo = (p.linkOther||"").startsWith("O")?`<div class="m"><span class="lbl">타사업 연계</span><span class="val">${esc(p.linkOther)}</span></div>`:"";
+      dr.innerHTML=`<td colspan="6"><div class="detail-inner">
+        ${p.note?`<div class="desc">${esc(p.note)}</div>`:`<div class="desc" style="color:var(--ink-3)">상세 설명이 없습니다.</div>`}
+        <div class="detail-meta">
+          <div class="m"><span class="lbl">재원</span><span class="chips">${fundsOf(p).map(fundBadge).join("")}</span></div>
+          <div class="m"><span class="lbl">원영역(통합 전)</span><span class="val">${esc(p.origArea||"—")}</span></div>
+          <div class="m"><span class="lbl">담당 부서</span><span class="val">${esc(p.dept||"—")}</span></div>
+          <div class="m"><span class="lbl">편성예산</span><span class="val tnum">${p.budget>0?won(p.budget):"미편성"}</span></div>
+          <div class="m"><span class="lbl">집행액</span><span class="val tnum">${p.budget>0?won(p.spent)+` (${Math.round((p.spent/p.budget)*100)||0}%)`:"—"}</span></div>
+          ${linkInfo}
+        </div>
+      </div></td>`;
+      tb.appendChild(dr);
     });
+    sec.querySelectorAll("thead th").forEach(th=>th.onclick=()=>{ const k=th.dataset.k; if(sortKey===k)sortDir*=-1; else{sortKey=k;sortDir=1;} render(); });
     list.appendChild(sec);
   });
 }
-function rowEl(p){
-  const r=document.createElement("div");
-  r.className="row"+(p.status==="미편성"?" unbudg":"")+(p.kind==="task_only"?" task-only":"");
-  const codeTxt = p.code? `<span class="code tnum">${p.code}</span>`:"";
-  const statusBadge = p.status==="편성"
-    ? `<span class="badge b-good">예산 편성</span>`
-    : `<span class="badge b-warn">예산 미편성</span>`;
-  const linkBadge = (p.linkOther||"").startsWith("O") ? `<span class="badge b-link">타사업 ${p.linkOther.slice(2)}</span>`:"";
-  const deptBadge = p.dept? `<span class="badge b-dept">${p.dept}</span>`:"";
-  const fundEls = fundsOf(p).map(fundBadge).join("");
-  const noteEl = p.note? `<div class="note">${p.note}</div>`:"";
-  const amtCls = p.budget>0? "":"zero";
-  const spentEl = p.budget>0? `<div class="sp tnum">집행 ${eok(p.spent)} · ${Math.round((p.spent/p.budget)*100)||0}%</div>`:"";
-  r.innerHTML=`<div class="main">
-      <div class="nm">${p.name} ${codeTxt}</div>
-      <div class="tags">${statusBadge}${fundEls}<span class="badge b-orig">${p.origArea}</span>${linkBadge}${deptBadge}</div>
-      ${noteEl}
-    </div>
-    <div class="right">
-      <div class="fig">
-        <div class="amt tnum ${amtCls}">${p.budget>0?eok(p.budget)+"원":"—"}</div>
-        <div class="lbl">${p.budget>0?"편성예산":"미편성"}</div>
-        ${spentEl}
-      </div>
-    </div>`;
-  return r;
+function toggleRow(id){
+  if(openRows.has(id))openRows.delete(id); else openRows.add(id);
+  render();
 }
-function renderChips(){
-  const el=document.getElementById("fieldChips"); el.innerHTML="";
-  const all=document.createElement("button"); all.className="fchip"; all.textContent="전체 분야"; all.setAttribute("aria-pressed", !filt.field);
-  all.onclick=()=>{filt.field="";syncChips();render();}; el.appendChild(all);
-  FIELDS.forEach(f=>{ const b=document.createElement("button"); b.className="fchip"; b.textContent=f;
-    b.setAttribute("aria-pressed", filt.field===f);
-    if(filt.field===f){b.style.background=`var(${FCVAR[f]})`;b.style.borderColor=`var(${FCVAR[f]})`;b.style.color="#fff";}
-    b.onclick=()=>{filt.field=filt.field===f?"":f;syncChips();render();}; el.appendChild(b); });
+function clearFilters(){ filt={q:"",status:"",orig:"",fund:""}; document.getElementById("q").value=""; document.getElementById("fStatus").value=""; document.getElementById("fOrig").value=""; document.getElementById("fFund").value=""; render(); }
+
+/* ---- filters populate ---- */
+function populate(){
+  const origs=[...new Set(programs.map(p=>p.origArea))];
+  const so=document.getElementById("fOrig"); so.innerHTML='<option value="">원영역 전체</option>';
+  origs.forEach(o=>{const op=document.createElement("option");op.value=o;op.textContent=o;so.appendChild(op);});
+  const present=new Set(); programs.forEach(p=>fundsOf(p).forEach(f=>present.add(f)));
+  const sf=document.getElementById("fFund"); sf.innerHTML='<option value="">재원 전체</option>';
+  FUNDS.filter(f=>present.has(f)).forEach(f=>{const op=document.createElement("option");op.value=f;op.textContent="재원: "+f;sf.appendChild(op);});
 }
-function syncChips(){ renderChips(); }
-function populateOrig(){
-  const set=[...new Set(programs.map(p=>p.origArea))];
-  const sel=document.getElementById("fOrig"); sel.innerHTML='<option value="">원영역 전체</option>';
-  set.forEach(o=>{ const op=document.createElement("option"); op.value=o; op.textContent=o; sel.appendChild(op); });
-  const fs=document.getElementById("fFund");
-  if(fs){ const present=new Set(); programs.forEach(p=>fundsOf(p).forEach(f=>present.add(f)));
-    fs.innerHTML='<option value="">재원 전체</option>';
-    FUNDS.filter(f=>present.has(f)).forEach(f=>{ const op=document.createElement("option"); op.value=f; op.textContent="재원: "+f; fs.appendChild(op); });
-    fs.value=filt.fund; }
-}
+
+/* ---- export ---- */
 function toCSV(rows){
-  const cols=["field2026","origArea","strategy","task","code","name","status","budget","spent","funding","dept","fundCat","linkOther","note"];
-  const head=["2026분야","원영역","전략","과제","코드","프로그램","예산상태","편성예산","집행액","재원","담당부서","비목분류","타사업연계","비고"];
-  const esc2=v=>{ if(Array.isArray(v)) v=v.join("+"); v=(v==null?"":String(v)).replace(/"/g,'""'); return /[",\n]/.test(v)?`"${v}"`:v;};
-  return "﻿"+[head.join(","), ...rows.map(r=>cols.map(c=>esc2(r[c])).join(","))].join("\n");
+  const cols=["field2026","origArea","strategy","task","code","name","status","budget","spent","funding","dept","linkOther","note"];
+  const head=["2026분야","원영역","전략","과제","코드","프로그램","예산상태","편성예산","집행액","재원","담당부서","타사업연계","비고"];
+  const e=v=>{ if(Array.isArray(v))v=v.join("+"); v=(v==null?"":String(v)).replace(/"/g,'""'); return /[",\n]/.test(v)?`"${v}"`:v; };
+  return "﻿"+[head.join(","),...rows.map(r=>cols.map(c=>e(r[c])).join(","))].join("\n");
 }
 function openExport(){
-  const rows=visible();
-  const root=document.getElementById("modalRoot");
-  const json=JSON.stringify(rows,null,1);
-  root.innerHTML=`<div class="overlay"><div class="modal" role="dialog" aria-modal="true">
-    <h3>내보내기 (${rows.length}개 · 현재 필터 기준)</h3>
-    <div class="body">
-      <div class="chipset" style="margin-bottom:10px"><button class="fchip" id="tab_json" aria-pressed="true">JSON</button><button class="fchip" id="tab_csv" aria-pressed="false">CSV (엑셀)</button></div>
-      <textarea class="export-area" id="exp" readonly></textarea>
-    </div>
-    <div class="foot"><span style="font-size:11.5px;color:var(--ink-3)">텍스트를 복사하거나 파일로 저장하세요</span><div class="r">
-      <button class="btn" id="e_close">닫기</button>
-      <button class="btn" id="e_copy">복사</button>
-      <button class="btn primary" id="e_file">파일로 저장</button>
-    </div></div></div></div>`;
+  const rows=visible(); const json=JSON.stringify(rows,null,1);
+  document.getElementById("modalRoot").innerHTML=`<div class="overlay"><div class="modal">
+    <h3>내보내기 (${rows.length}건 · 현재 필터 기준)</h3>
+    <div class="body"><div class="seg"><button id="tj" aria-pressed="true">JSON</button><button id="tc" aria-pressed="false">CSV (엑셀)</button></div>
+    <textarea class="export-area" id="exp" readonly></textarea></div>
+    <div class="foot"><span style="font-size:12.5px;color:var(--ink-3);align-self:center">복사하거나 파일로 저장하세요</span>
+    <div class="r"><button class="btn" id="ec">닫기</button><button class="btn" id="ecp">복사</button><button class="btn primary" id="ef">파일로 저장</button></div></div>
+  </div></div>`;
   const ta=document.getElementById("exp"); let mode="json";
-  const setj=()=>{ta.value=json;mode="json";document.getElementById("tab_json").setAttribute("aria-pressed","true");document.getElementById("tab_csv").setAttribute("aria-pressed","false");};
-  const setc=()=>{ta.value=toCSV(rows);mode="csv";document.getElementById("tab_csv").setAttribute("aria-pressed","true");document.getElementById("tab_json").setAttribute("aria-pressed","false");};
-  setj();
-  document.getElementById("tab_json").onclick=setj;
-  document.getElementById("tab_csv").onclick=setc;
+  const sj=()=>{ta.value=json;mode="json";tj.setAttribute("aria-pressed","true");tc.setAttribute("aria-pressed","false");};
+  const sc=()=>{ta.value=toCSV(rows);mode="csv";tc.setAttribute("aria-pressed","true");tj.setAttribute("aria-pressed","false");};
+  const tj=document.getElementById("tj"), tc=document.getElementById("tc"); sj();
+  tj.onclick=sj; tc.onclick=sc;
   const close=()=>document.getElementById("modalRoot").innerHTML="";
-  document.getElementById("e_close").onclick=close;
+  document.getElementById("ec").onclick=close;
   document.querySelector(".overlay").onclick=e=>{if(e.target===document.querySelector(".overlay"))close();};
-  document.getElementById("e_copy").onclick=async()=>{ try{await navigator.clipboard.writeText(ta.value);toast("복사됨");}catch(e){ta.select();toast("선택됨 · Ctrl+C");} };
-  document.getElementById("e_file").onclick=()=>{
-    const fn = mode==="json"?"innovation_programs.json":"innovation_programs.csv";
-    try{
-      const blob=new Blob([ta.value],{type:mode==="json"?"application/json":"text/csv;charset=utf-8"});
-      const url=URL.createObjectURL(blob); const a=document.createElement("a");
-      a.href=url; a.download=fn; document.body.appendChild(a); a.click();
-      setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},500); toast("다운로드 시작");
-    }catch(e){ ta.select(); toast("복사해서 저장하세요"); }
-  };
+  document.getElementById("ecp").onclick=async()=>{try{await navigator.clipboard.writeText(ta.value);toast("복사됨");}catch(e){ta.select();toast("선택됨 · Ctrl+C");}};
+  document.getElementById("ef").onclick=()=>{ const fn=mode==="json"?"innovation_programs.json":"innovation_programs.csv";
+    try{const blob=new Blob([ta.value],{type:mode==="json"?"application/json":"text/csv;charset=utf-8"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=fn;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},500);toast("다운로드 시작");}catch(e){ta.select();toast("복사해서 저장하세요");}};
 }
-function esc(s){return (s==null?"":String(s)).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
-let toastT;
-function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("show"),2200);}
+let toastT; function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("show"),2200);}
 
+/* ---- events ---- */
 document.getElementById("q").addEventListener("input",e=>{filt.q=e.target.value;render();});
 document.getElementById("fStatus").addEventListener("change",e=>{filt.status=e.target.value;render();});
 document.getElementById("fOrig").addEventListener("change",e=>{filt.orig=e.target.value;render();});
 document.getElementById("fFund").addEventListener("change",e=>{filt.fund=e.target.value;render();});
 document.getElementById("expBtn").onclick=openExport;
-document.getElementById("themeBtn").onclick=()=>{
-  const cur=document.documentElement.getAttribute("data-theme");
-  const isDark = cur? cur==="dark" : matchMedia("(prefers-color-scheme:dark)").matches;
-  document.documentElement.setAttribute("data-theme", isDark?"light":"dark");
-};
+document.getElementById("themeBtn").onclick=()=>{const cur=document.documentElement.getAttribute("data-theme");const dark=cur?cur==="dark":matchMedia("(prefers-color-scheme:dark)").matches;document.documentElement.setAttribute("data-theme",dark?"light":"dark");};
 
-renderChips(); populateOrig(); render();
+populate(); render();
 </script>
